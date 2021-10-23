@@ -54,7 +54,7 @@ public class DataSortCommand {
 
                 StringBuilder sortedNbtElementString = new StringBuilder("{" + path.toString() + ":[");
                 for (String t : list) {
-                    sortedNbtElementString.append("\"" + t + "\",");
+                    sortedNbtElementString.append("\"" + t.replace("\"","\\\"") + "\",");
                 }
                 sortedNbtElementString.deleteCharAt(sortedNbtElementString.length() - 1).append("]}");
 
