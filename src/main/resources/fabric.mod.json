@@ -2,7 +2,6 @@
   "schemaVersion": 1,
   "id": "execute_output",
   "version": "${version}",
-
   "name": "Execute output",
   "description": "Allows you to put a command's output somewhere without using a command block.",
   "authors": [

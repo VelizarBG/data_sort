@@ -1,9 +1,10 @@
 {
   "required": true,
-  "minVersion": "0.9",
   "package": "com.velizarbg.execute_output.mixins",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
+    "CommandManagerMixin",
+    "DataCommandMixin"
   ],
   "client": [
   ],

@@ -1,0 +1,4 @@
+{
+  "commands.data.sort.not_list": "The specified path is not a list",
+  "commands.data.sort.not_string_list": "Can't sort list of %s; only list of TAG_String is allowed"
+}
