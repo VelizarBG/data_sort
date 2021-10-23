@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "execute_output",
+  "id": "data_sort",
   "version": "${version}",
-  "name": "Execute output",
-  "description": "Allows you to put a command's output somewhere without using a command block.",
+  "name": "Data sort",
+  "description": "A command allowing you to sort a string array similar to how 'tag list' and 'team list' sort their outputs.",
   "authors": [
     "VelizarBG"
   ],
@@ -19,7 +19,7 @@
     ]
   },
   "mixins": [
-    "execute_output.mixins.json"
+    "data_sort.mixins.json"
   ],
 
   "depends": {
