@@ -53,10 +53,11 @@ public class DataSortCommand {
                 list.sort(Comparable::compareTo);
 
                 StringBuilder sortedNbtElementString = new StringBuilder("{a:[");
+                listSize = list.size();
                 for (String t : list) {
-                    sortedNbtElementString.append("\"" + t.replace("\"","\\\"") + "\",");
+                    sortedNbtElementString.append("\"" + t.replace("\"", "\\\"") + (listSize != 1 ? "\"," : "\"]}"));
+                    listSize--;
                 }
-                sortedNbtElementString.deleteCharAt(sortedNbtElementString.length() - 1).append("]}");
 
                 path.put(nbtCompound, (parse(sortedNbtElementString.toString())).get("a"));
                 object.setNbt(nbtCompound);
