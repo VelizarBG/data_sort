@@ -52,13 +52,13 @@ public class DataSortCommand {
                 }
                 list.sort(Comparable::compareTo);
 
-                StringBuilder sortedNbtElementString = new StringBuilder("{" + path.toString() + ":[");
+                StringBuilder sortedNbtElementString = new StringBuilder("{a:[");
                 for (String t : list) {
                     sortedNbtElementString.append("\"" + t.replace("\"","\\\"") + "\",");
                 }
                 sortedNbtElementString.deleteCharAt(sortedNbtElementString.length() - 1).append("]}");
 
-                nbtCompound.copyFrom(parse(String.valueOf(sortedNbtElementString)));
+                path.put(nbtCompound, (parse(sortedNbtElementString.toString())).get("a"));
                 object.setNbt(nbtCompound);
                 source.sendFeedback(object.feedbackModify(), true);
             } else throw NOT_A_STRING_LIST_EXCEPTION.create(((NbtList) nbtElement).get(0).getNbtType().getCommandFeedbackName());
